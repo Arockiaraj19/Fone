@@ -9,7 +9,7 @@ const SeparatorContainer: NextPage<SeparatorContainerType> = ({
 }) => {
   return (
     <div
-      className={`w-[1456.5px] flex flex-col items-start justify-start gap-[3.5px] max-w-[108%] shrink-0 text-left text-xl text-anew-black font-inter ${className}`}
+      className={`w-[1456.5px] mb-10 flex flex-col items-start justify-start gap-[3.5px] max-w-[108%] shrink-0 text-left text-xl text-anew-black font-inter ${className}`}
     >
       <div className="self-stretch h-px flex flex-row items-start justify-end max-w-full">
         <div className="self-stretch w-[1242px] relative box-border max-w-full border-t-[1px] border-solid border-gray-200" />

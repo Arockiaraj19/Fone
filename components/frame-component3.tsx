@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import StepsCards from "./steps-cards";
+import { SelectDevice } from "./select-device-component";
 
 export type FrameComponent3Type = {
   className?: string;
@@ -34,52 +35,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
           />
         </div>
       </div>
-      <div className="w-[1126px] flex flex-row flex-wrap items-start justify-center gap-[32px] max-w-full text-5xl font-work-sans mq800:gap-[16px]">
-        <div className="flex-1 shadow-[0px_2px_20px_rgba(210,_206,_221,_0.25)] rounded-3xl bg-white box-border flex flex-col items-center justify-start py-[52px] pr-4 pl-3.5 gap-[12px] min-w-[195px] max-w-[257px] border-[1px] border-solid border-plum">
-          <img
-            className="w-[180px] h-[180px] relative object-contain"
-            loading="lazy"
-            alt=""
-            src="/image-124@2x.png"
-          />
-          <h3 className="m-0 self-stretch relative text-inherit leading-[22px] font-medium font-inherit mq450:text-lgi mq450:leading-[18px]">
-            Sell Phone
-          </h3>
-        </div>
-        <div className="flex-1 shadow-[0px_2px_20px_rgba(210,_206,_221,_0.25)] rounded-3xl bg-white box-border flex flex-col items-center justify-start py-[52px] pr-4 pl-3.5 gap-[12px] min-w-[195px] max-w-[257px] border-[1px] border-solid border-plum">
-          <img
-            className="w-[180px] h-[180px] relative object-cover"
-            loading="lazy"
-            alt=""
-            src="/image-124-1@2x.png"
-          />
-          <h3 className="m-0 self-stretch relative text-inherit leading-[22px] font-medium font-inherit mq450:text-lgi mq450:leading-[18px]">
-            Sell laptop
-          </h3>
-        </div>
-        <div className="flex-1 shadow-[0px_2px_20px_rgba(210,_206,_221,_0.25)] rounded-3xl bg-white box-border flex flex-col items-center justify-start py-[52px] pr-4 pl-3.5 gap-[12px] min-w-[195px] max-w-[257px] border-[1px] border-solid border-plum">
-          <img
-            className="w-[180px] h-[180px] relative object-cover"
-            loading="lazy"
-            alt=""
-            src="/image-124-2@2x.png"
-          />
-          <h3 className="m-0 self-stretch relative text-inherit leading-[22px] font-medium font-inherit mq450:text-lgi mq450:leading-[18px]">
-            Sell Tablet
-          </h3>
-        </div>
-        <div className="flex-1 shadow-[0px_2px_20px_rgba(210,_206,_221,_0.25)] rounded-3xl bg-white box-border flex flex-col items-center justify-start py-[52px] pr-4 pl-3.5 gap-[12px] min-w-[195px] max-w-[257px] border-[1px] border-solid border-plum">
-          <img
-            className="w-[180px] h-[180px] relative object-contain"
-            loading="lazy"
-            alt=""
-            src="/image-124-3@2x.png"
-          />
-          <h3 className="m-0 self-stretch relative text-inherit leading-[22px] font-medium font-inherit mq450:text-lgi mq450:leading-[18px]">
-            Sell Smartwtch
-          </h3>
-        </div>
-      </div>
+<SelectDevice/>
     </section>
   );
 };

@@ -15,8 +15,8 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
       <div className="w-[1116px] flex flex-col items-end justify-start gap-[14.5px] max-w-full">
         <div className="w-[430px] rounded-sm box-border flex flex-row items-start justify-start p-[18px] max-w-full border-[1px] border-solid border-darkslateblue-100">
           <input
-            className="w-[70px] [border:none] [outline:none] font-medium font-work-sans text-sm bg-[transparent] h-4 relative tracking-[-0.06em] text-thistle text-left flex items-center p-0"
-            placeholder="Full Name*"
+            className="w-[91px] [border:none] [outline:none] font-medium font-work-sans text-sm bg-[transparent] h-4 relative tracking-[-0.06em] text-thistle text-left flex items-center p-0"
+            placeholder="Your Name*"
             type="text"
           />
         </div>
@@ -50,7 +50,7 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
           <div className="w-[430px] flex flex-col items-start justify-start pt-[9.5px] px-0 pb-0 box-border min-w-[430px] max-w-full text-sm text-thistle font-work-sans mq750:min-w-full mq1050:flex-1">
             <div className="self-stretch flex flex-col items-start justify-start gap-[24px] max-w-full">
               <div className="self-stretch flex flex-row items-start justify-start gap-[24px] mq450:flex-wrap">
-                <div className="rounded-sm overflow-x-auto flex flex-row items-start justify-start py-[17px] px-[15px] gap-[10px] border-[1px] border-solid border-darkslateblue-100">
+                {/* <div className="rounded-sm overflow-x-auto flex flex-row items-start justify-start py-[17px] px-[15px] gap-[10px] border-[1px] border-solid border-darkslateblue-100">
                   <img
                     className="self-stretch w-[25px] relative rounded-sm max-h-full shrink-0 object-cover min-h-[18px]"
                     alt=""
@@ -66,7 +66,7 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
                       V
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="flex-1 rounded-sm box-border flex flex-row items-start justify-start p-[18px] min-w-[91px] border-[1px] border-solid border-darkslateblue-100">
                   <input
                     className="w-[91px] [border:none] [outline:none] font-medium font-work-sans text-sm bg-[transparent] h-4 relative tracking-[-0.06em] text-thistle text-left flex items-center p-0"
@@ -83,18 +83,26 @@ const FrameComponent11: NextPage<FrameComponent11Type> = ({
                 />
               </div>
               <div className="self-stretch rounded-sm flex flex-row items-start justify-start p-[18px] border-[1px] border-solid border-darkslateblue-100">
-                <input
+                {/* <input
                   className="w-[59px] [border:none] [outline:none] font-medium font-work-sans text-sm bg-[transparent] h-4 relative tracking-[-0.06em] text-thistle text-left flex items-center p-0"
                   placeholder="Subject *"
                   type="text"
-                />
+                /> */}
+                <select id='emirates'>
+                  <option value=''>Select Emirates</option>
+                  {['Dubai', 'Ajman', 'Sharjah'].map((e:any) => <option key={e} value={e}>{e}</option>)}
+                </select>
               </div>
               <div className="self-stretch rounded-sm flex flex-row items-start justify-start p-[18px] border-[1px] border-solid border-darkslateblue-100">
-                <input
+                {/* <input
                   className="w-[165px] [border:none] [outline:none] font-medium font-work-sans text-sm bg-[transparent] h-4 relative tracking-[-0.06em] text-thistle text-left flex items-center p-0"
                   placeholder="Tell us about your enquiry*"
                   type="text"
-                />
+                /> */}
+                <select id='emirates'>
+                  <option value=''>Device Conditions</option>
+                  {['Average', 'Good', 'Excellent', 'Brand new'].map((e:any) => <option key={e} value={e}>{e}</option>)}
+                </select>
               </div>
               <div className="self-stretch rounded-sm flex flex-row items-start justify-start py-0 pr-7 pl-0 box-border gap-[10px] max-w-full text-new-1f mq450:flex-wrap">
                 <input

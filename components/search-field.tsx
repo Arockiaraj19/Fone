@@ -2,17 +2,18 @@ import type { NextPage } from "next";
 
 export type SearchFieldType = {
   className?: string;
+  heading?:string;
 };
 
-const SearchField: NextPage<SearchFieldType> = ({ className = "" }) => {
+const SearchField: NextPage<SearchFieldType> = ({ className = "",heading }) => {
   return (
     <div
       className={`self-stretch flex flex-row items-center justify-between max-w-full gap-[20px] text-left text-13xl text-new-1f font-work-sans mq750:flex-wrap ${className}`}
     >
       <h2 className="m-0 relative text-inherit tracking-[-0.06em] leading-[70px] font-medium font-inherit mq1050:text-7xl mq1050:leading-[56px] mq450:text-lgi mq450:leading-[42px]">
-        Select your model
+      {heading}
       </h2>
-      <div className="w-[412px] rounded-sm box-border flex flex-row items-center justify-start py-3.5 pr-[210px] pl-[17px] gap-[10px] max-w-full border-[1px] border-solid border-darkslateblue-100 mq450:pr-5 mq450:box-border">
+      {/* <div className="w-[412px] rounded-sm box-border flex flex-row items-center justify-start py-3.5 pr-[210px] pl-[17px] gap-[10px] max-w-full border-[1px] border-solid border-darkslateblue-100 mq450:pr-5 mq450:box-border">
         <img
           className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
           alt=""
@@ -23,7 +24,7 @@ const SearchField: NextPage<SearchFieldType> = ({ className = "" }) => {
           placeholder="Search your model"
           type="text"
         />
-      </div>
+      </div> */}
     </div>
   );
 };
