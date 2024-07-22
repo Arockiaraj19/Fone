@@ -3,16 +3,31 @@ import { fetchDeviceTypes } from "../service/device_type.service";
 import { SelectedBrands } from "./selected-brands";
 import { SelectedBrandModel } from "./selected-brand-model";
 import { SelectedBrandModelsize } from "./selected-brand-modelsize";
+import { SellNowForm } from "./sell-now-form";
+import { SelectConditionComponent } from "./selected_condition_component";
+import { PriceComponent } from "./price_component";
 
-export const SelectDevice = ({ isHome = false, setSelectedDevicesList }:{isHome:any, setSelectedDevicesList:any}) => {
+export const SelectDevice = ({
+  isHome = false,
+  setSelectedDevicesList,
+  selectedDevicesList,
+  deviceChoosing,
+  setDeviceChoosing,
+}: {
+  isHome: any;
+  setSelectedDevicesList: any;
+  selectedDevicesList: any;
+  deviceChoosing: any;
+  setDeviceChoosing: any;
+}) => {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [brandId, setBrandId] = useState("");
   const [brandModelId, setBrandModelId] = useState("");
   const [sizeId, setSizeId] = useState("");
-  const [deviceChoosing, setDeviceChoosing] = useState("devices");
-
+const [brandSizeId,setbrandSizeId]=useState(null);
+const [deviceId,setDeviceId]=useState(null);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -34,14 +49,13 @@ export const SelectDevice = ({ isHome = false, setSelectedDevicesList }:{isHome:
 
   return (
     <>
-      <div className="capitalize w-[1126px] flex flex-row flex-wrap items-start justify-center gap-[32px] max-w-full text-5xl font-work-sans mq800:gap-[16px]">
+      <div className="capitalize w-full flex flex-row flex-wrap items-start justify-center gap-[32px] max-w-full text-5xl font-work-sans mq800:gap-[16px]">
         {deviceChoosing === "devices" &&
           data.map((e: any, index: any) => {
-            
             return (
               <div
                 onClick={() => {
-                  setSelectedDevicesList((p:any) => [...p, e.name]);
+                  setSelectedDevicesList((p: any) => [...p, e]);
                   setBrandId(e.id);
                   setDeviceChoosing("brands");
                 }}
@@ -80,7 +94,26 @@ export const SelectDevice = ({ isHome = false, setSelectedDevicesList }:{isHome:
       {deviceChoosing === "brandmodelsizes" && (
         <SelectedBrandModelsize
           sizeId={sizeId}
-          // setDeviceChoosing={setDeviceChoosing}
+          setDeviceChoosing={setDeviceChoosing}
+          setSelectedDevicesList={setSelectedDevicesList}
+          setbrandSizeId={setbrandSizeId}
+        />
+      )}
+      {deviceChoosing === "sellnowForm" && (
+        <SellNowForm selectedDevicesList={selectedDevicesList} />
+      )}
+      {deviceChoosing === "selectCondition" && (
+        <SelectConditionComponent
+        setDeviceId={setDeviceId}
+          setDeviceChoosing={setDeviceChoosing}
+          setSelectedDevicesList={setSelectedDevicesList}
+        />
+      )}
+      {deviceChoosing === "price_page" && (
+        <PriceComponent
+        deviceId={deviceId}
+        brandSizeId={brandSizeId}
+          setDeviceChoosing={setDeviceChoosing}
           setSelectedDevicesList={setSelectedDevicesList}
         />
       )}

@@ -40,7 +40,7 @@ export const SelectedBrands = ({
           onClick={() => {
             setDeviceChoosing("brandmodels");
             setBrandModelId(e.id);
-            setSelectedDevicesList((p:any) => [...p, e.name]);
+            setSelectedDevicesList((p:any) => [...p, e]);
           }}
         >
           {e.name}

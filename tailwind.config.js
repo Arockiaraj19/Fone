@@ -15,6 +15,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+        after: 'after 2s cubic-bezier(.77,0,.18,1) forwards',
+        before: 'before 2s cubic-bezier(.77,0,.18,1) forwards',
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
@@ -26,6 +28,13 @@ module.exports = {
         },
       },
       colors: {
+        'primary': '#F9F9F9',
+      'secondary': '#363636',
+     
+      'black':'#141414',
+      'grey':'#dfdfdf',
+      'dark_grey':'#909090',
+      'blue':"#038ede",
         white: "#fff",
         "anew-black": "#494949",
         midnightblue: {

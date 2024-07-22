@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
-
+import { useMemo, type CSSProperties, useState } from "react";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export type HeaderType = {
   className?: string;
 
@@ -20,35 +21,58 @@ const Header: NextPage<HeaderType> = ({
       alignSelf: frameDivAlignSelf,
     };
   }, [frameDivFlex, frameDivAlignSelf]);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
-    <header
-      className={`bg-white fixed z-20 flex-1 flex flex-col items-start justify-center py-1 px-[94px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq450:pl-5 mq450:pr-5 mq450:box-border mq1050:pl-[47px] mq1050:pr-[47px] mq1050:box-border ${className}`}
-      style={frameHeader1Style}
-    >
-      <div className="self-stretch bg-white flex flex-row items-center justify-start py-0 pr-[499px] pl-0 box-border gap-[32px] max-w-full lg:pr-[249px] lg:box-border mq450:pr-5 mq450:box-border mq750:gap-[16px] mq750:pr-[124px] mq750:box-border">
-        <img
-          className="h-10 w-40 relative object-cover"
-          loading="lazy"
-          alt=""
-          src="/logo.png"
-        />
-        <div className="flex-1   flex flex-row items-center justify-center py-0 px-6 box-border gap-[39px] max-w-full mq750:gap-[19px] mq1050:hidden">
-          <a href="/" className="hover:text-new-1f no-underline flex-1 relative tracking-[-0.06em] leading-[87px] font-medium text-[inherit] whitespace-nowrap">
-            Home
-          </a>
-          <a  href="/sell-now" className="hover:text-new-1f no-underline flex-1 relative tracking-[-0.06em] leading-[87px] font-medium text-[inherit] whitespace-nowrap">
-            Sell Now
-          </a>
-          <a href="/about-us" className="hover:text-new-1f no-underline relative tracking-[-0.06em] leading-[87px] font-medium text-[inherit] inline-block min-w-[72px] whitespace-nowrap">
-            About us
-          </a>
-          <a href="/contact-us" className="hover:text-new-1f no-underline relative tracking-[-0.06em] leading-[87px] font-medium text-[inherit] whitespace-pre-wrap inline-block min-w-[92px] shrink-0">
-            Contact us
-          </a>
-        </div>
+    <header className={`bg-white w-full fixed z-20 flex flex-col items-start justify-center py-1 px-[94px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5 mq1050:px-[47px] ${className}`}>
+    <div className="self-stretch bg-white w-full flex flex-row items-center justify-between py-0 box-border gap-[32px] max-w-full   mq750:gap-[16px]">
+      <img
+        className="h-10 w-40 object-cover"
+        loading="lazy"
+        alt="Logo"
+        src="/logo.png"
+      />
+      <div className="mq750:hidden  gap-8 flex  flex-1 flex-row items-center justify-end py-0 px-6 box-border ">
+        <a href="/" className="hover:text-new-1f no-underline  relative tracking-[-0.06em] leading-[87px] font-medium text-inherit whitespace-nowrap">
+          Home
+        </a>
+        <a href="/sell-now" className="hover:text-new-1f no-underline  relative tracking-[-0.06em] leading-[87px] font-medium text-inherit whitespace-nowrap">
+          Sell Now
+        </a>
+        <a href="/about-us" className="hover:text-new-1f no-underline relative tracking-[-0.06em] leading-[87px] font-medium text-inherit   whitespace-nowrap">
+          About us
+        </a>
+        <a href="/contact-us" className="hover:text-new-1f no-underline relative tracking-[-0.06em] leading-[87px] font-medium text-inherit ">
+          Contact us
+        </a>
       </div>
-    </header>
+      <div className="hidden mq750:flex  items-center">
+    {
+      isMobileMenuOpen? <FontAwesomeIcon icon={faXmark} className=" text-new-1f h-10 w-10" onClick={toggleMobileMenu} />:<FontAwesomeIcon icon={faBars} className=" text-new-1f h-10 w-10" onClick={toggleMobileMenu}/>
+    }  
+        
+      </div>
+    </div>
+    <div className={` ${isMobileMenuOpen ? 'hidden mq750:flex flex-col gap-1 bg-white justify-start' : 'hidden'}`}>
+    <a href="/" className="hover:text-new-1f no-underline  relative tracking-[-0.06em] leading-[87px] font-medium text-inherit whitespace-nowrap">
+          Home
+        </a>
+        <a href="/sell-now" className="hover:text-new-1f no-underline  relative tracking-[-0.06em] leading-[87px] font-medium text-inherit whitespace-nowrap">
+          Sell Now
+        </a>
+        <a href="/about-us" className="hover:text-new-1f no-underline relative tracking-[-0.06em] leading-[87px] font-medium text-inherit   whitespace-nowrap">
+          About us
+        </a>
+        <a href="/contact-us" className="hover:text-new-1f no-underline relative tracking-[-0.06em] leading-[87px] font-medium text-inherit ">
+          Contact us
+        </a>
+    </div>
+  </header>
+
+  
   );
 };
 

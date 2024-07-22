@@ -13,6 +13,7 @@ import { InfiniteMovingCards } from "../components/infinit_moving_card";
 import { HoverEffect } from "../components/card-hover-effect";
 import Slider from "../components/slider";
 import { QuestionComponent } from "../components/faq-component";
+import { HeaderComponent } from "../components/custom_header";
 
 
 const Homepage: NextPage = () => {
@@ -33,8 +34,8 @@ const Homepage: NextPage = () => {
         direction="right"
         speed="slow"/>
       <section className=" pt-0 px-0 pb-16 box-border max-w-full text-left text-45xl text-new-1f font-poppins mq1125:pb-[42px] mq1125:box-border mq450:pb-[27px] mq450:box-border">
-        <div className="w-full bg-ghostwhite flex flex-row items-center justify-center py-[120px] pr-0 px-60 box-border gap-[20.5px] max-w-full mq800:ph-[60px] mq800:box-border mq1125:pt-[78px] mq1125:pb-[78px] mq1125:box-border mq450:px-5 mq450:pt-[51px] mq450:pb-[51px] mq450:box-border  mq1350:px-[120px] mq1350:box-border">
-          <div className="w-1/2  flex-col justify-start py-0 pr-5 pl-0 box-border gap-[10px] ">
+        <div className="w-full bg-ghostwhite flex mq750:flex-col flex-row flex-wrap items-center justify-center  pr-0 px-60 box-border gap-[20.5px] max-w-full  mq800:box-border   mq1125:box-border mq450:px-5  mq450:box-border   mq1350:box-border">
+          <div className="mq750:w-screen mq750:px-5  w-1/2  flex-col justify-start py-0 pr-5 pl-0 box-border gap-[10px] ">
             <h1 className="m-0  relative text-inherit tracking-[-0.06em] leading-[70px] font-medium font-inherit flex items-center shrink-0  mq800:text-32xl mq800:leading-[56px] mq450:text-19xl mq450:leading-[42px]">
               FAQs
             </h1>
@@ -42,22 +43,22 @@ const Homepage: NextPage = () => {
           <SellButtonContainer />
          
           </div>
-            <div className="flex-1 flex flex-col items-start justify-end pt-0 px-0 pb-[2.5px] box-border text-3xl font-work-sans ">
-              <div className="self-stretch flex flex-col items-start justify-start">
+            <div className="mq750:w-screen bg-black mq750:px-5 mq750:justify-start flex-1 flex flex-col items-start justify-end pt-0 px-0 pb-[2.5px] box-border text-3xl font-work-sans ">
+             
+         {/* <QuestionComponent/>
          <QuestionComponent/>
          <QuestionComponent/>
          <QuestionComponent/>
-         <QuestionComponent/>
-         <QuestionComponent/>
+         <QuestionComponent/> */}
           
-              </div>
+              
             </div>
         </div>
       </section>
       <div className="w-[1127px] h-px relative box-border hidden max-w-full border-t-[1px] border-solid border-gray-300" />
       <section className="self-stretch flex flex-col items-start justify-start gap-[42.7px] max-w-full text-left text-xl text-anew-black font-inter mq450:gap-[21px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[74px] max-w-full mq800:gap-[37px] mq450:gap-[18px]">
-          <NewsletterContent />
+         
           <Footer />
         </div>
         <div className="self-stretch flex flex-row items-start justify-center py-0 pr-5 pl-[26px] box-border max-w-full">

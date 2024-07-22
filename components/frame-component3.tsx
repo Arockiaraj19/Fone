@@ -16,14 +16,14 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
           Sell your device in 3 easy steps
         </h1>
         <div className="self-stretch flex flex-row items-center justify-center gap-[24px] font-work-sans mq1125:flex-wrap">
-          <StepsCards getAPriceInLessThan2Minut="Get a price in less than 2 minutes" />
+          <StepsCards getAPriceInLessThan2Minut="Get a price in less than 2 minutes" index="1"/>
           <img
             className="h-[37px] w-[63px] relative object-contain"
             loading="lazy"
             alt=""
             src="/image-125@2x.png"
           />
-          <StepsCards getAPriceInLessThan2Minut="Free home pick-up within 24 hours" />
+          <StepsCards getAPriceInLessThan2Minut="Free home pick-up within 24 hours" index="2"/>
           <img
             className="h-[37px] w-[63px] relative object-contain"
             loading="lazy"
@@ -31,7 +31,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
             src="/image-126@2x.png"
           />
           <StepsCards
-            getAPriceInLessThan2Minut={`Get secure data wipe & cash instantly`}
+            getAPriceInLessThan2Minut={`Get secure data wipe & cash instantly`} index="3"
           />
         </div>
       </div>

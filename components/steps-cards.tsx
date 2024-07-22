@@ -3,11 +3,13 @@ import type { NextPage } from "next";
 export type StepsCardsType = {
   className?: string;
   getAPriceInLessThan2Minut?: string;
+  index:string
 };
 
 const StepsCards: NextPage<StepsCardsType> = ({
   className = "",
   getAPriceInLessThan2Minut,
+  index
 }) => {
   return (
     <div
@@ -15,7 +17,7 @@ const StepsCards: NextPage<StepsCardsType> = ({
     >
       <div className="self-stretch h-[60px] flex flex-row items-center justify-start py-0 px-0 box-border gap-[12px]">
         <div className="w-[65px] relative font-semibold flex items-center justify-center shrink-0 mq800:text-32xl mq450:text-19xl">
-          1
+       {index}  
         </div>
         <div className="flex-1 relative text-xl text-left mq450:text-base">
           {getAPriceInLessThan2Minut}

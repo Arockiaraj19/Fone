@@ -17,11 +17,7 @@ const ContactUs: NextPage = () => {
             src="/frame-1171275730@2x.png"
           />
         </div>
-        <button className="cursor-pointer [border:none] py-4 px-5 bg-new-1f w-[430px] rounded-xl flex flex-row items-start justify-center box-border max-w-full hover:bg-darkslateblue-200">
-          <div className="relative text-lg tracking-[-0.06em] font-medium font-poppins text-white text-left inline-block min-w-[60px]">
-            Submit
-          </div>
-        </button>
+       
       </section>
       <div className="self-stretch h-px relative box-border hidden border-t-[1px] border-solid border-midnightblue-200" />
       <Footer />
