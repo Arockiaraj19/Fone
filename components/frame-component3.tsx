@@ -35,7 +35,7 @@ const FrameComponent3: NextPage<FrameComponent3Type> = ({ className = "" }) => {
           />
         </div>
       </div>
-<SelectDevice/>
+{/* <SelectDevice/> */}
     </section>
   );
 };
