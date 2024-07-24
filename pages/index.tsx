@@ -14,11 +14,13 @@ import { HoverEffect } from "../components/card-hover-effect";
 import Slider from "../components/slider";
 import { QuestionComponent } from "../components/faq-component";
 import { HeaderComponent } from "../components/custom_header";
+import FAQMainComponent from "../components/faq_main_component";
 
 
 const Homepage: NextPage = () => {
   return (
-    <div className="w-full relative bg-white overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[64.3px] box-border leading-[normal] tracking-[normal]">
+    <>
+    <div className="w-full relative bg-white overflow-hidden  flex flex-col items-start justify-start pt-0 px-0 pb-[64.3px] box-border leading-[normal] tracking-[normal]">
       <Header/>
       <Slider slides={[1,2,3]}/>
     
@@ -33,29 +35,10 @@ const Homepage: NextPage = () => {
       <InfiniteMovingCards    items={testimonials}
         direction="right"
         speed="slow"/>
-      <section className=" pt-0 px-0 pb-16 box-border max-w-full text-left text-45xl text-new-1f font-poppins mq1125:pb-[42px] mq1125:box-border mq450:pb-[27px] mq450:box-border">
-        <div className="w-full bg-ghostwhite flex mq750:flex-col flex-row flex-wrap items-center justify-center  pr-0 px-60 box-border gap-[20.5px] max-w-full  mq800:box-border   mq1125:box-border mq450:px-5  mq450:box-border   mq1350:box-border">
-          <div className="mq750:w-screen mq750:px-5  w-1/2  flex-col justify-start py-0 pr-5 pl-0 box-border gap-[10px] ">
-            <h1 className="m-0  relative text-inherit tracking-[-0.06em] leading-[70px] font-medium font-inherit flex items-center shrink-0  mq800:text-32xl mq800:leading-[56px] mq450:text-19xl mq450:leading-[42px]">
-              FAQs
-            </h1>
-            <SeparatorContainer />
-          <SellButtonContainer />
-         
-          </div>
-            <div className="mq750:w-screen bg-black mq750:px-5 mq750:justify-start flex-1 flex flex-col items-start justify-end pt-0 px-0 pb-[2.5px] box-border text-3xl font-work-sans ">
-             
-         {/* <QuestionComponent/>
-         <QuestionComponent/>
-         <QuestionComponent/>
-         <QuestionComponent/>
-         <QuestionComponent/> */}
-          
-              
-            </div>
-        </div>
-      </section>
-      <div className="w-[1127px] h-px relative box-border hidden max-w-full border-t-[1px] border-solid border-gray-300" />
+{/* <FAQMainComponent/> */}
+     
+    
+    
       <section className="self-stretch flex flex-col items-start justify-start gap-[42.7px] max-w-full text-left text-xl text-anew-black font-inter mq450:gap-[21px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[74px] max-w-full mq800:gap-[37px] mq450:gap-[18px]">
          
@@ -80,6 +63,7 @@ const Homepage: NextPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

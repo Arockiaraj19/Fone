@@ -16,9 +16,7 @@ const SeparatorContainer: NextPage<SeparatorContainerType> = ({
       </div>
       <div className="w-[1140px] flex flex-row flex-wrap items-start justify-start py-0 pr-5 pl-0 box-border gap-[10px] max-w-full">
         <div className="w-[542px] flex flex-col items-start justify-start gap-[24px] max-w-full">
-          <div className="self-stretch relative font-medium mq450:text-base">
-            Can’t find the answer you are looking for?
-          </div>
+         
        
         </div>
       

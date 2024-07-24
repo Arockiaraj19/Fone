@@ -27,7 +27,7 @@ const Header: NextPage<HeaderType> = ({
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   return (
-    <header className={`bg-white w-full fixed z-20 flex flex-col items-start justify-center py-1 px-[94px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5 mq1050:px-[47px] ${className}`}>
+    <header className={`bg-white w-full fixed z-20 flex flex-col items-start justify-center py-1 px-[94px] mq1050:px-[47px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5  ${className}`}>
     <div className="self-stretch bg-white w-full flex flex-row items-center justify-between py-0 box-border gap-[32px] max-w-full   mq750:gap-[16px]">
       <img
         className="h-10 w-40 object-cover"
