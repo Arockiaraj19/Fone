@@ -3,10 +3,11 @@ import Header from "../components/header";
 import FrameComponent10 from "../components/frame-component10";
 import Footer from "../components/footer";
 import SearchField from "../components/search-field";
-import { useScroll } from "framer-motion";
+
 import { useState,useEffect } from "react";
 import { SelectDevice } from "../components/select-device-component";
 import { SelectDeviceCompo } from "../components/selected-device-compo";
+import FooterSection from "../components/footer_section";
 
 
 const SellNow: NextPage = () => {
@@ -36,7 +37,7 @@ useEffect(() => {
         </div>
       </section>
     
-      <Footer />
+      <FooterSection />
 
     </div>
   );

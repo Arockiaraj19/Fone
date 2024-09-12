@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import { useMemo, type CSSProperties, useState } from "react";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/router";
+
 export type HeaderType = {
   className?: string;
 
@@ -26,10 +28,12 @@ const Header: NextPage<HeaderType> = ({
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const router=useRouter()
   return (
-    <header className={`bg-white w-full fixed z-20 flex flex-col items-start justify-center py-1 px-[94px] mq1050:px-[47px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5  ${className}`}>
+    <header className={`bg-white w-full fixed z-50 flex flex-col items-start justify-center py-0 mq750:py-5 px-[94px] mq1050:px-[47px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5  ${className}`}>
     <div className="self-stretch bg-white w-full flex flex-row items-center justify-between py-0 box-border gap-[32px] max-w-full   mq750:gap-[16px]">
       <img
+      onClick={(e)=>router.push("/")}
         className="h-10 w-40 object-cover"
         loading="lazy"
         alt="Logo"
@@ -51,7 +55,7 @@ const Header: NextPage<HeaderType> = ({
       </div>
       <div className="hidden mq750:flex  items-center">
     {
-      isMobileMenuOpen? <FontAwesomeIcon icon={faXmark} className=" text-new-1f h-10 w-10" onClick={toggleMobileMenu} />:<FontAwesomeIcon icon={faBars} className=" text-new-1f h-10 w-10" onClick={toggleMobileMenu}/>
+      isMobileMenuOpen? <FontAwesomeIcon icon={faXmark} className=" text-new-1f h-8 w-8" onClick={toggleMobileMenu} />:<FontAwesomeIcon icon={faBars} className=" text-new-1f h-8 w-8" onClick={toggleMobileMenu}/>
     }  
         
       </div>

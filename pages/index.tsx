@@ -1,33 +1,27 @@
 import type { NextPage } from "next";
-
-import MainComponent from "../components/home_main_component";
 import FrameComponent3 from "../components/frame-component3";
 import FrameComponent1 from "../components/frame-component1";
-import FrameComponent from "../components/frame-component";
-import SeparatorContainer from "../components/separator-container";
-import SellButtonContainer from "../components/sell-button-container";
-import NewsletterContent from "../components/newsletter-content";
-import Footer from "../components/footer";
+
 import Header from "../components/header";
 import { InfiniteMovingCards } from "../components/infinit_moving_card";
-import { HoverEffect } from "../components/card-hover-effect";
+
 import Slider from "../components/slider";
-import { QuestionComponent } from "../components/faq-component";
-import { HeaderComponent } from "../components/custom_header";
+
 import FAQMainComponent from "../components/faq_main_component";
+import FooterSection from "../components/footer_section";
 
 
 const Homepage: NextPage = () => {
   return (
     <>
-    <div className="w-full relative bg-white  flex flex-col items-start justify-start pt-0 px-0 pb-[64.3px] box-border leading-[normal] tracking-[normal]">
+    <div className="w-full relative bg-white  flex flex-col items-start justify-start pt-0 px-0 box-border leading-[normal] tracking-[normal]">
 <Header/> 
   <Slider slides={[1,2,3]}/>
 
 
    <FrameComponent3 />
       <FrameComponent1 />
-      <section className="self-stretch flex flex-row items-start justify-center pt-0 pb-16 pr-5 pl-[26px] box-border max-w-full text-center text-45xl text-new-1f font-poppins">
+      <section className="self-stretch flex flex-row items-start justify-center pt-0 pb-16 pr-5  box-border max-w-full text-center text-45xl text-new-1f font-poppins">
         <h1 className="m-0 w-[1126px] relative text-inherit tracking-[-0.06em] leading-[70px] font-medium font-inherit flex items-center justify-center shrink-0 max-w-full mq800:text-32xl mq800:leading-[56px] mq450:text-19xl mq450:leading-[42px]">
           Testimonials
         </h1>
@@ -39,29 +33,7 @@ const Homepage: NextPage = () => {
 
 
 
-      <section className="self-stretch flex flex-col items-start justify-start gap-[42.7px] max-w-full text-left text-xl text-anew-black font-inter mq450:gap-[21px]">
-        <div className="self-stretch flex flex-col items-start justify-start gap-[74px] max-w-full mq800:gap-[37px] mq450:gap-[18px]">
-
-          <Footer />
-        </div>
-        <div className="self-stretch flex flex-row items-start justify-center py-0 pr-5 pl-[26px] box-border max-w-full">
-          <div className="w-[1126px] flex flex-row items-start justify-between max-w-full gap-[20px] mq800:flex-wrap">
-            <div className="flex flex-row items-start justify-start gap-[24px] max-w-full mq450:flex-wrap">
-              <div className="relative font-medium mq450:text-base">
-                Terms and Conditions
-              </div>
-              <a className="[text-decoration:none] relative font-medium text-[inherit] mq450:text-base">
-                Privacy Policy
-              </a>
-            </div>
-            <div className="flex flex-col items-start justify-start pt-[3.5px] px-0 pb-0 text-sm">
-              <div className="relative font-medium inline-block min-w-[106px]">
-                Copyright 2024
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> 
+   <FooterSection/>
     </div>
     </>
   );
@@ -129,3 +101,4 @@ export const projects = [
     link: "https://meta.com",
   }
 ];
+

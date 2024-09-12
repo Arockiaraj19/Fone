@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
-import FrameComponent9 from "../components/frame-component9";
 import FrameComponent8 from "../components/frame-component8";
 import FrameComponent7 from "../components/frame-component7";
 import FrameComponent5 from "../components/frame-component5";
 import Header from "../components/header";
-import Footer from "../components/footer";
+import FooterSection from "../components/footer_section";
 
 const AboutUs: NextPage = () => {
   return (
-    <div className="w-full relative bg-white overflow-hidden flex flex-col items-end justify-start pt-0 px-0 pb-[184px] box-border gap-[47px] leading-[normal] tracking-[normal] text-left text-xl text-anew-black font-inter mq450:gap-[23px]">
+    <div className="w-full relative bg-white overflow-hidden flex flex-col items-end justify-start pt-0 px-0 box-border gap-[47px] leading-[normal] tracking-[normal] text-left text-xl text-anew-black font-inter mq450:gap-[23px]">
     <Header/>
       <section className="self-stretch flex flex-row items-start justify-end pt-0 px-60 pb-[73px] box-border max-w-full text-center text-xs text-white font-inter mq450:pl-5 mq450:pr-5 mq450:box-border mq750:pb-[47px] mq750:box-border mq1100:pl-[120px] mq1100:pr-[120px] mq1100:box-border">
         <div className="flex-1 rounded-3xl flex flex-col items-start justify-start py-[223px] px-0 box-border gap-[32px] bg-[url('/frame-1171275752@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq750:gap-[16px] mq750:pt-[145px] mq750:pb-[145px] mq750:box-border">
@@ -56,25 +55,7 @@ const AboutUs: NextPage = () => {
       <FrameComponent8 />
       <FrameComponent7 />
       <FrameComponent5 />
-      <div className="self-stretch h-px relative box-border hidden border-t-[1px] border-solid border-midnightblue-200" />
-      <Footer />
-      <div className="self-stretch flex flex-row items-start justify-center py-0 pr-5 pl-[26px] box-border max-w-full">
-        <div className="w-[1126px] flex flex-row items-start justify-between max-w-full gap-[20px] mq750:flex-wrap">
-          <div className="flex flex-row items-start justify-start gap-[24px] max-w-full mq450:flex-wrap">
-            <div className="relative font-medium mq450:text-base">
-              Terms and Conditions
-            </div>
-            <div className="relative font-medium mq450:text-base">
-              Privacy Policy
-            </div>
-          </div>
-          <div className="flex flex-col items-start justify-start pt-[3.5px] px-0 pb-0 text-sm">
-            <div className="relative font-medium inline-block min-w-[106px]">
-              Copyright 2024
-            </div>
-          </div>
-        </div>
-      </div>
+      <FooterSection />
     </div>
   );
 };
