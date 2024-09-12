@@ -9,7 +9,7 @@ const MainComponent: NextPage<MainComponentType> = ({ className = "" }) => {
   const router=useRouter()
   return (
     <section
-      className={`self-stretch  bg-ghostwhite flex flex-row items-start justify-start py-[120px] px-20 box-border gap-[10px] max-w-full text-left text-45xl text-new-1f font-poppins mq800:py-[40px] mq800:px-[40px] mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border mq1350:flex-wrap ${className}`}
+      className={`self-stretch mt-0 mq750:mt-8 bg-ghostwhite flex flex-row items-start justify-start py-[120px] px-20 box-border gap-[10px] max-w-full text-left text-45xl text-new-1f font-poppins mq800:py-[40px] mq800:px-[40px] mq800:box-border mq450:pl-5 mq450:pr-5 mq450:box-border mq1350:flex-wrap ${className}`}
     >
       <div className="w-full flex flex-col items-start justify-start pt-[23.5px] px-0 pb-0 box-border  max-w-full mq1125:min-w-full mq1350:flex-1">
         <div className="self-stretch flex flex-col items-start justify-start gap-[24px]">

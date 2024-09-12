@@ -9,7 +9,7 @@ const AboutUs: NextPage = () => {
   return (
     <div className="w-full relative bg-white overflow-hidden flex flex-col items-end justify-start pt-0 px-0 box-border gap-[47px] leading-[normal] tracking-[normal] text-left text-xl text-anew-black font-inter mq450:gap-[23px]">
     <Header/>
-      <section className="self-stretch flex flex-row items-start justify-end pt-0 px-60 pb-[73px] box-border max-w-full text-center text-xs text-white font-inter mq450:pl-5 mq450:pr-5 mq450:box-border mq750:pb-[47px] mq750:box-border mq1100:pl-[120px] mq1100:pr-[120px] mq1100:box-border">
+      <section className="mt-0 mq750:mt-20 self-stretch flex flex-row items-start justify-end pt-0 px-60 pb-[73px] box-border max-w-full text-center text-xs text-white font-inter mq450:pl-5 mq450:pr-5 mq450:box-border mq750:pb-[47px] mq750:box-border mq1100:pl-[120px] mq1100:pr-[120px] mq1100:box-border">
         <div className="flex-1 rounded-3xl flex flex-col items-start justify-start py-[223px] px-0 box-border gap-[32px] bg-[url('/frame-1171275752@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq750:gap-[16px] mq750:pt-[145px] mq750:pb-[145px] mq750:box-border">
           <div className="self-stretch relative font-medium">ABOUT US</div>
           <div className="self-stretch flex flex-col items-start justify-start gap-[12px] text-45xl font-work-sans">

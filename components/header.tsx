@@ -30,7 +30,7 @@ const Header: NextPage<HeaderType> = ({
   };
   const router=useRouter()
   return (
-    <header className={`bg-white w-full fixed z-50 flex flex-col items-start justify-center py-0 mq750:py-5 px-[94px] mq1050:px-[47px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5  ${className}`}>
+    <header className={`bg-white w-full fixed z-50 flex flex-col items-start justify-center py-0  mq750:py-5 px-[94px] mq1050:px-[47px] box-border max-w-full text-left text-lg text-anew-black font-work-sans mq750:px-5  ${className}`}>
     <div className="self-stretch bg-white w-full flex flex-row items-center justify-between py-0 box-border gap-[32px] max-w-full   mq750:gap-[16px]">
       <img
       onClick={(e)=>router.push("/")}

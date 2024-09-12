@@ -37,7 +37,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                 customersServed="Devices with live prices"
                 propFlex="unset"
               />
-              <div className="self-stretch flex flex-row items-end justify-start max-w-full">
+              {/* <div className="self-stretch flex flex-row items-end justify-start max-w-full">
                 <div className="flex-1 flex flex-row items-center justify-start gap-[16px] max-w-full mq450:flex-wrap">
                   <div className="rounded-25xl overflow-hidden flex flex-row items-center justify-start p-3">
                     <img
@@ -53,11 +53,16 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
                     </div>
                     <div className="relative text-xl tracking-[-0.06em] leading-[28px] font-medium mq450:text-base mq450:leading-[22px]">
                       <p className="m-0">Electronic dealers compete to give</p>
-                      <p className="m-0">you the best price</p>
+                      <p className="m-0"></p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+                {/* <FrameComponent2
+                customerCountLabel="500+"
+                customersServed="Electronic dealers compete to give"
+                propFlex="unset"
+              /> */}
               <FrameComponent2
                 customerCountLabel="4.8/5"
                 customersServed="
