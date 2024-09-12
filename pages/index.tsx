@@ -20,28 +20,28 @@ import FAQMainComponent from "../components/faq_main_component";
 const Homepage: NextPage = () => {
   return (
     <>
-    <div className="w-full relative bg-white overflow-hidden  flex flex-col items-start justify-start pt-0 px-0 pb-[64.3px] box-border leading-[normal] tracking-[normal]">
-      <Header/>
-      <Slider slides={[1,2,3]}/>
-    
+    <div className="w-full relative bg-white  flex flex-col items-start justify-start pt-0 px-0 pb-[64.3px] box-border leading-[normal] tracking-[normal]">
+<Header/> 
+  <Slider slides={[1,2,3]}/>
 
-      <FrameComponent3 />
+
+   <FrameComponent3 />
       <FrameComponent1 />
       <section className="self-stretch flex flex-row items-start justify-center pt-0 pb-16 pr-5 pl-[26px] box-border max-w-full text-center text-45xl text-new-1f font-poppins">
         <h1 className="m-0 w-[1126px] relative text-inherit tracking-[-0.06em] leading-[70px] font-medium font-inherit flex items-center justify-center shrink-0 max-w-full mq800:text-32xl mq800:leading-[56px] mq450:text-19xl mq450:leading-[42px]">
           Testimonials
         </h1>
-      </section>
+      </section> 
       <InfiniteMovingCards    items={testimonials}
         direction="right"
         speed="slow"/>
-{/* <FAQMainComponent/> */}
-     
-    
-    
+ <FAQMainComponent/>
+
+
+
       <section className="self-stretch flex flex-col items-start justify-start gap-[42.7px] max-w-full text-left text-xl text-anew-black font-inter mq450:gap-[21px]">
         <div className="self-stretch flex flex-col items-start justify-start gap-[74px] max-w-full mq800:gap-[37px] mq450:gap-[18px]">
-         
+
           <Footer />
         </div>
         <div className="self-stretch flex flex-row items-start justify-center py-0 pr-5 pl-[26px] box-border max-w-full">
@@ -61,7 +61,7 @@ const Homepage: NextPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
     </div>
     </>
   );
