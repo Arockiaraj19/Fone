@@ -70,7 +70,7 @@ module.exports = {
         inter: "Inter",
         "work-sans": "'Work Sans'",
         poppins: "Poppins",
-        "plus-jakarta-sans": "'Plus Jakarta Sans'",
+        "plus-jakarta-sans": "Plus Jakarta Sans",
       },
       borderRadius: {
         sm: "14px",
