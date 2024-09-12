@@ -78,7 +78,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-      <div className="self-stretch h-px relative box-border border-t-[1px] border-solid border-midnightblue-200" />
+     
     </div>
   );
 };
