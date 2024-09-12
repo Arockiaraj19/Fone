@@ -17,6 +17,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
           <div className="w-[437px] flex flex-col items-start justify-start max-w-full">
             <div className="flex flex-col items-start justify-start pt-2.5 pb-[40.7px] pr-0 pl-2.5 box-border">
             <img
+            onClick={(e)=>router.push("/")}
           className="h-10 w-40 relative object-cover"
           loading="lazy"
           alt=""
