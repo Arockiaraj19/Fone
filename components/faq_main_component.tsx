@@ -1,7 +1,9 @@
+import { useRouter } from "next/router"
 import { QuestionComponent } from "./faq-component"
 
 
 const FAQMainComponent=()=>{
+  const router=useRouter();
     return (   <div className="overflow-auto   grid grid-cols-2 mq750:grid-cols-1 mq750:px-5 px-[94px] mq1050:px-[47px] mq450:px-5 text-45xl text-new-1f font-poppins">
     <div className="w-full   flex-col justify-start mq450:justify-center mq450:items-center   box-border gap-[10px] ">
       <h1 className="relative text-inherit tracking-[-0.06em] leading-[70px] font-medium font-inherit flex items-center  mq800:text-32xl mq800:leading-[56px] mq450:text-19xl mq450:leading-[42px]">
@@ -10,7 +12,9 @@ const FAQMainComponent=()=>{
       <div className="text-xl mt-10 text-anew-black self-stretch relative font-medium mq450:text-base">
       Can’t find the answer you are looking for?
     </div>
-    <button className="cursor-pointer mt-10 [border:none] py-4 px-10 bg-new-1f rounded-xl flex flex-row items-start justify-start hover:bg-darkslateblue-200">
+    <button onClick={(e)=>{
+router.push("/sell-now")
+    }} className="cursor-pointer mt-10 [border:none] py-4 px-10 bg-new-1f rounded-xl flex flex-row items-start justify-start hover:bg-darkslateblue-200">
     <div className="relative text-lg tracking-[-0.06em] font-medium font-poppins text-white text-left inline-block">
       Sell Your Device
     </div>

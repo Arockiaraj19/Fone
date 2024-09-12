@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
 import FrameComponent2 from "./frame-component2";
+import { useRouter } from "next/router";
 
 export type FrameComponent1Type = {
   className?: string;
 };
 
 const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
+  const router=useRouter()
   return (
     <section
       className={`self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[120px] box-border max-w-full text-left text-45xl text-new-1f font-poppins mq800:pb-[51px] mq800:box-border mq1125:pb-[78px] mq1125:box-border ${className}`}
@@ -63,7 +65,9 @@ Customer rating"
                 propFlex="unset"
               />
             </div>
-            <button className="cursor-pointer [border:none] py-4 px-10 bg-new-1f rounded-xl flex flex-row items-start justify-start whitespace-nowrap hover:bg-darkslateblue-200">
+            <button onClick={(e)=>{
+router.push("/sell-now")
+    }} className="cursor-pointer [border:none] py-4 px-10 bg-new-1f rounded-xl flex flex-row items-start justify-start whitespace-nowrap hover:bg-darkslateblue-200">
               <div className="relative text-lg tracking-[-0.06em] font-medium font-poppins text-white text-left inline-block min-w-[127px]">
                 Sell Your Device
               </div>

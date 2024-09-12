@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 
 export type FrameComponent8Type = {
   className?: string;
 };
 
 const FrameComponent8: NextPage<FrameComponent8Type> = ({ className = "" }) => {
+  const router=useRouter()
   return (
     <section
       className={`self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[73px] box-border max-w-full text-left text-xs text-white font-work-sans mq450:pb-[31px] mq450:box-border mq1100:pb-[47px] mq1100:box-border ${className}`}
@@ -43,7 +45,9 @@ const FrameComponent8: NextPage<FrameComponent8Type> = ({ className = "" }) => {
               From finding the best prices to the best technologies and
               operations support, we will support you with what it takes.
             </div>
-            <button className="cursor-pointer [border:none] py-4 px-10 bg-white rounded-xl flex flex-row items-start justify-start whitespace-nowrap hover:bg-gainsboro">
+            <button onClick={(e)=>{
+router.push("/sell-now")
+    }} className="cursor-pointer [border:none] py-4 px-10 bg-white rounded-xl flex flex-row items-start justify-start whitespace-nowrap hover:bg-gainsboro">
               <div className="relative text-lg tracking-[-0.06em] font-medium font-poppins text-new-1f text-left inline-block min-w-[127px]">
                 Sell Your Device
               </div>
