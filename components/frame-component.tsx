@@ -15,8 +15,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
         <TestimonialCards1 />
         <TestimonialCards1 />
       
-        <TestimonialCards />
-        <TestimonialCards />
+      
         <TestimonialCards1 />
         <TestimonialCards1 />
       </div>
