@@ -1,8 +1,7 @@
 "use client";
 
-
 import React, { useEffect, useState } from "react";
-import {cn} from "../helpers/utils"
+import { cn } from "../helpers/utils";
 import TestimonialCards from "./testimonial-cards";
 
 export const InfiniteMovingCards = ({
@@ -15,7 +14,6 @@ export const InfiniteMovingCards = ({
   items: {
     quote: string;
     name: string;
-    title: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -88,7 +86,7 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <TestimonialCards key={idx}/>
+          <TestimonialCards item={item} key={idx} />
         ))}
       </ul>
     </div>

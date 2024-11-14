@@ -5,10 +5,10 @@ import { useState } from "react";
 export const QuestionComponent=({title,body}:{title:any,body:any})=>{
 const [isExpand,setIsExpand]=useState(false);
 
-    return (   <div className="w-full  flex flex-col items-start justify-start py-5 px-0">
-    <div className="w-full flex flex-row items-start justify-between gap-[20px]">
+    return (   <div className="w-full  flex flex-col items-start justify-start py-1 px-0">
+    <div className="w-full flex flex-row items-start justify-between">
     <div className="flex-1">
-    <h3 className=" text-wrap m-0 relative leading-[28px] font-medium mq450:text-lg ">
+    <h3 className=" text-wrap m-0 relative leading-[28px] font-normal text-lg mq450:text-lg ">
        {title}
       </h3>
     </div>
